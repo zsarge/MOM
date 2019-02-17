@@ -8,9 +8,11 @@
 
   "homepage_url": "https://www.elderhs.org/page",
 
+  "options_page": "options.html",
+
   "permissions": [
-    "webRequest",
-    "webRequestBlocking"
+    // "webRequest",
+    // "webRequestBlocking"
   ],
 
   // "background": {
@@ -36,4 +38,5 @@
       "48": "images/MOM.png",
       "128": "images/MOM.png" //This is still not the exact size, but it's close enough.
   }
+
 }
