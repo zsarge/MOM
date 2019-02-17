@@ -1,7 +1,7 @@
 window.onload = function(){
     //default settings values
-    var li1 = 1,
-        li2 = 0,
+    var li1 = 1, //Allow all web content
+        li2 = 0, //Enable whitelist
         li3 = 0,
         li4 = 0,
         li5 = 0,
@@ -109,6 +109,7 @@ window.onload = function(){
             document.getElementById("hero").src = "images/awc/enabled.svg";
             document.getElementById("manage").style.background = "#62CC48";
             li1++;
+            
         }
         else if (li1 == 1){
             document.getElementById("li1").src = "images/disabled.png";
