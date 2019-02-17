@@ -1,0 +1,39 @@
+{
+
+  "manifest_version": 2,
+  "name": "MOM - Media Organizational Manager",
+  "version": "1.0",
+
+  "description": "Media Organizational Manager",
+
+  "homepage_url": "https://www.elderhs.org/page",
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+
+  // "background": {
+  //   "scripts": ["mom.js", "popup.js"]
+  // },
+
+  "content_scripts":[
+    {
+      "matches":[ //This is where to put all of the websites you want to block.
+        "https://www.vox.com/*",
+        "https://www.reddit.com/*"
+      ],
+      "js":["mom.js"]
+    }
+  ],
+
+  "browser_action": {
+      "default_popup": "popup.html" //This is the file opened when you click on the icon
+  },
+  "icons": {
+      "16": "images/favicon-16x16.png",
+      "32": "images/favicon-32x32.png", //These are the only actual .ico files.
+      "48": "images/MOM.png",
+      "128": "images/MOM.png" //This is still not the exact size, but it's close enough.
+  }
+}
