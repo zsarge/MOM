@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "MOM - Media Organizational Manager",
-  "version": "1.0",
+  "version": "1.1",
 
   "description": "Media Organizational Manager",
 
@@ -28,6 +28,8 @@
       "js":["mom.js"]
     }
   ],
+
+  "options_page": "/options/options.html",
 
   "browser_action": {
       "default_popup": "popup.html" //This is the file opened when you click on the icon

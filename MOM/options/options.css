@@ -1,0 +1,132 @@
+body, html{
+    margin: 0px;
+}
+#navbar{
+    width: 100vw;
+    height: 12.71vh;
+    box-shadow: 0px 5px 10px 0px #919191;
+    position: absolute;
+    z-index: 90;
+    background-color: #ffffff;
+}
+
+#hero{
+    height: 40vh;
+    display: block;
+    margin: auto;
+    padding-top: 19vh;
+}
+
+#text{
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #3F3D56;
+    font-size: 2vw;
+    text-align: left;
+    margin-bottom: 1vh;;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #3F3D56;
+    text-align: left;
+    margin-bottom: 9vh;
+    margin-top: 1vh;
+    font-size: 1.5vw;
+}
+
+#backicon{
+    font-family: 'icons';
+    font-size: 9vh;
+    color: #8C8C8C;
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+    width: 4.5vw;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+#backicon:hover{
+    background-color: #EFEFEF;
+}
+
+#details{
+    width: 46.13vw;
+    height: 100vh;
+    background-color: #94E879;
+}
+#options{
+    width: 53.87vw;
+    height: 100vh;
+    position: absolute;
+    right: 0px;
+    top: 0px;    
+}
+#list{
+    padding-top: 12.17vh;
+    padding-left: 9vw;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2vw;
+    
+}
+
+.lio{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    background-color: #EFEFEF;
+    width: 30vw;
+    text-align: center;
+    height: 8vh;
+    padding-top: 2.3vh;
+    border-radius: 60px;
+}
+
+.lio:hover{
+    background-color: #D8D8D8;
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: icons;
+    src: url(icomoon.woff);
+}
+
+#iconslist{
+    list-style-type: none;
+    position: absolute;
+    right: 7vw;
+    top: 14vh;
+}
+
+.di{
+    width: 5vw;
+    margin-top: 4.3vh;
+    cursor: pointer;
+
+}
+
+#manage{
+    text-decoration: none;
+    color: white;
+    background-color: #62CC48;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 9vh;
+    padding-right: 9vh;
+    border-radius: 30px;
+    display: none;
+    cursor: pointer;
+}
