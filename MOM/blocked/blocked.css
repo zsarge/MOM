@@ -1,0 +1,103 @@
+html, body{
+    margin: 0px;
+}
+
+#hero{
+    width: 30vw;
+    display: block;
+    margin: auto;
+    padding-top: 15vh;
+}
+
+#text{
+    width: 30vw;
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #3F3D56;
+    font-size: 2vw;
+    text-align: left;
+    margin-bottom: 1vh;;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #3F3D56;
+    text-align: left;
+    margin-bottom: 9vh;
+    margin-top: 1vh;
+}
+
+#request:link{
+    text-decoration: none;
+    color: white;
+    background-color: #4848CC;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 9vh;
+    padding-right: 9vh;
+    border-radius: 30px;
+}
+
+#request:visited{
+    color: white;
+}
+
+#shade{
+    background-color: rgba(0, 0, 0, 0.233);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+
+#popup{
+    width: 45vw;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    align-content: center;
+    border-radius: 15px;
+    display: none;
+}
+
+#popupimg{
+    width: 30vw;
+    display: block;
+    margin: auto;
+}
+
+@font-face {
+    font-family: icons;
+    src: url(icomoon.woff);
+}
+
+#exit{
+    font-family: 'icons';
+    font-size: 5vh;
+    color: #8C8C8C;
+    text-align: right;
+    padding-right: 0.5vw;
+    padding-top: 0.7vh;
+}
+
+#exitlink:link{
+    text-decoration: none;
+    color: #8C8C8C;
+}
+
+#exitlink:visited{
+    color: #8c8c8c;
+}
