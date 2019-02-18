@@ -10,10 +10,13 @@ I simply made things work the way I wanted them to.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+html, body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif;}
+h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
+#button{background-color: transparent; border: none; cursor: pointer;}
 </style>
 <body class="w3-theme-l5">
 
@@ -58,16 +61,16 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Status:</h4>
+         
          <p class="w3-center">
             <figure>
                 <center>
-                    <img src="images/safe-icon.png" style="width:75%" class="w3-margin-bottom">
+                    <img src="images/safe-icon.svg" style="width:100%" class="w3-margin-bottom">
                 </center>
                 
                 <figcaption>
                     <center>
-                         <font color="#ff524c">Safe</font>
+                         <font color="#62cc48">Safe</font>
                     </center>
                 </figcaption>
             </figure>
@@ -84,7 +87,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="w3-card w3-round">
         <div class="w3-white">
 
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> People</button>
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fa fa-users fa-fw w3-margin-right"></i> People</button>
           <div id="Demo1" class="w3-hide w3-container">
             <p>Jane <font color="green">[Strict]</font></p>
             <p>Linda <font color="green">[Strict]</font></p>
@@ -93,7 +96,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             <p>Bill <font color="#ff524c">[No Rules]</font></p>
           </div>
 
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Days Enforced</button>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Days Enforced</button>
           <div id="Demo2" class="w3-hide w3-container">
             <p>✓ Sunday</p>
             <p>✓ Monday</p>
@@ -103,7 +106,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             <p>✓ Friday</p>
             <p>✓ Saturday</p>
           </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Security Level</button>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fas fa-shield-alt fa-fw w3-margin-right"></i> Security Level</button>
          
           <div id="Demo3" class="w3-hide w3-container">
 <!--             <p> 
@@ -152,7 +155,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Interests --> 
       <div class="w3-card w3-round w3-white w3-hide-small">
         <div class="w3-container">
-          <p>Pages Allowed</p>
+          <p id="semibold">Pages Allowed</p>
           <p>
             <span class="w3-tag w3-small w3-theme-d5">Google.com</span> <!-- This is a template. This does not currently control anything. -->
             <span class="w3-tag w3-small w3-theme-d4">PBSkids.org</span>
@@ -191,16 +194,16 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Add New Website:</h6>
               <p contenteditable="true" class="w3-border w3-padding">E.G. duckduckgo.com</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> Enter</button> 
+              <button type="button" class="w3-button w3-theme" id="semibold"><i class="fas fa-edit"></i> Enter</button> 
             </div>
           </div>
         </div>
       </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="images/child.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <i alt="Avatar" class="fas fa-user-circle w3-left w3-circle w3-margin-right" style="font-size: 60px; color: #5c5c5c;"></i>
         <span class="w3-right w3-opacity">⭮ 1 min ago</span>
-        <h4>John Doe</h4><br>
+        <h4 style="color: #575757;">John Doe</h4><br>
         <hr class="w3-clear">
         <p>
             <img src="images/JohnDoe.png" alt="Avatar"style="width:500px">
@@ -231,9 +234,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>  
       </div>   -->
             <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="images/child.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">⭮ 16 min ago</span>
-        <h4>Jane Doe</h4><br>
+            <i alt="Avatar" class="fas fa-user-circle w3-left w3-circle w3-margin-right" style="font-size: 60px; color: #5c5c5c;"></i>
+            <span class="w3-right w3-opacity">⭮ 16 min ago</span>
+            <h4 style="color: #575757;">Jane Doe</h4><br>
         <hr class="w3-clear">
         <p>
             <img src="images/JaneDoe.png" alt="Avatar"style="width:500px">
@@ -273,7 +276,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m2">
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>There are page requests seeking conformation:</p>
+          <p id="semibold">There are page requests seeking confirmation:</p>
           <!-- <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
           <p><strong>Tech Olympics</strong></p>
           <p>Friday 15:00</p>
@@ -291,10 +294,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <span>Jane Doe</span>
           <div class="w3-row w3-opacity">
             <div class="w3-half">
-              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+              <button class="w3-section" id="button" title="Accept"><img src="options/images/enabled.png" width="75%""></i></button>
             </div>
             <div class="w3-half">
-              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+              <button class="w3-section"id="button" title="Decline"><img src="options/images/disabled.png" width="75%"></button>
             </div>
           </div>
         </div>
@@ -309,10 +312,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <span>John Doe</span>
           <div class="w3-row w3-opacity">
             <div class="w3-half">
-              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+              <button class="w3-section" id="button" title="Accept"><img src="options/images/enabled.png" width="75%""></i></button>
             </div>
             <div class="w3-half">
-              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+              <button class="w3-section"id="button" title="Decline"><img src="options/images/disabled.png" width="75%"></button>
             </div>
           </div>
         </div>
