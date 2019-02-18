@@ -46,16 +46,17 @@ p{
 #backicon{
     font-family: 'icons';
     font-size: 8vh;
-    color: #8C8C8C;
-    margin-top: 0h;
+    color: #FFFFFF;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
     margin-left: 1vw;
-    width: 4.5vw;
+    width: 4vw;
     border-radius: 60px;
     cursor: pointer;
 }
 
 #backicon:hover{
-    background-color: #EFEFEF;
+    background-color: #42555f;
 }
 
 #details{
