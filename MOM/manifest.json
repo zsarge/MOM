@@ -8,26 +8,13 @@
 
   "homepage_url": "https://www.elderhs.org/page",
 
-  "options_page": "options.html",
-
   "permissions": [
-    // "webRequest",
-    // "webRequestBlocking"
+    "tabs"
   ],
-
-  // "background": {
-  //   "scripts": ["mom.js", "popup.js"]
-  // },
-
-  "content_scripts":[
-    {
-      "matches":[ //This is where to put all of the websites you want to block.
-        "https://www.vox.com/*",
-        "https://www.reddit.com/*"
-      ],
-      "js":["mom.js"]
-    }
-  ],
+    //All non-whitelisted websites are now blocked. Go to bkg.js and add websites to the allowed array to add them to the whitelist.
+  "background": {
+    "scripts": ["bkg.js"]
+  },
 
   "options_page": "/options/options.html",
 
