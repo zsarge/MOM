@@ -13,9 +13,10 @@ I simply made things work the way I wanted them to.
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="dashboard.js"></script>
 <style>
 html, body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif;}
-h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
+h1, h2, h3, h4, h5, h6, a, figcaption, #semibold, button{font-weight: 600;}
 #button{background-color: transparent; border: none; cursor: pointer;}
 </style>
 <body class="w3-theme-l5">
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
       <div class="w3-card w3-round">
         <div class="w3-white">
 
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fa fa-users fa-fw w3-margin-right"></i> People</button>
+          <button class="w3-button w3-block w3-theme-l1 w3-left-align" id="ppl"><i class="fa fa-users fa-fw w3-margin-right"></i> People</button>
           <div id="Demo1" class="w3-hide w3-container">
             <p>Jane <font color="green">[Strict]</font></p>
             <p>Linda <font color="green">[Strict]</font></p>
@@ -94,7 +95,7 @@ h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
             <p>Bill <font color="#ff524c">[No Rules]</font></p>
           </div>
 
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Days Enforced</button>
+          <button class="w3-button w3-block w3-theme-l1 w3-left-align" id="daysenf"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Days Enforced</button>
           <div id="Demo2" class="w3-hide w3-container">
             <p>✓ Sunday</p>
             <p>✓ Monday</p>
@@ -104,7 +105,7 @@ h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
             <p>✓ Friday</p>
             <p>✓ Saturday</p>
           </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align" id="semibold"><i class="fas fa-shield-alt fa-fw w3-margin-right"></i> Security Level</button>
+          <button class="w3-button w3-block w3-theme-l1 w3-left-align" id="securitylvl"><i class="fas fa-shield-alt fa-fw w3-margin-right"></i> Security Level</button>
          
           <div id="Demo3" class="w3-hide w3-container">
 <!--             <p> 
@@ -292,7 +293,7 @@ h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
           <span>Jane Doe</span>
           <div class="w3-row w3-opacity">
             <div class="w3-half">
-              <button class="w3-section" id="button" title="Accept"><img src="options/images/enabled.png" width="75%""></i></button>
+              <button class="w3-section" id="button" title="Accept"><img src="options/images/enabled.png" width="75%"></i></button>
             </div>
             <div class="w3-half">
               <button class="w3-section"id="button" title="Decline"><img src="options/images/disabled.png" width="75%"></button>
@@ -348,30 +349,6 @@ h1, h2, h3, h4, h5, h6, a, figcaption, #semibold{font-weight: 600;}
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer> -->
  
-<script>
-// Accordion
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
 
 </body>
 </html> 
