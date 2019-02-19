@@ -9,6 +9,7 @@ window.onload = function(){
     document.getElementById("securitylvl").addEventListener("click", function(){
         myFunction("Demo3");
     });
+    document.getElementById("exit").addEventListener('click', closeWindow);
     function myFunction(id) {
         var x = document.getElementById(id);
         if (x.className.indexOf("w3-show") == -1) {
@@ -21,6 +22,11 @@ window.onload = function(){
         }
     }
     
+    function closeWindow() { 
+        window.open('','_parent',''); 
+        window.close(); 
+    } 
+
     // Used to toggle the menu on smaller screens when clicking on the menu button
     function openNav() {
         var x = document.getElementById("navDemo");

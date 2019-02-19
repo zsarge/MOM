@@ -1,6 +1,6 @@
 window.onload = function(){
 
-    var allowed = ["chrome-extension://","google.com/","nbclearn.com/"]; //DO NOT REMOVE chrome-extension://
+    var allowed = ["chrome-extension://","chrome://","google.com/","nbclearn.com/"]; //DO NOT REMOVE chrome-extension:// or chrome://
 
     chrome.tabs.onUpdated.addListener(function (){
         chrome.tabs.query({'active': true, 'lastFocusedWindow': true, 'currentWindow': true}, function (tabs) {
