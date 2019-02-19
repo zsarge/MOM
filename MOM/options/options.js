@@ -102,7 +102,7 @@ window.onload = function(){
         document.getElementById("dh1").innerHTML = "Allow all web content";
         document.getElementById("dp").innerHTML = "Enable this if you want to have access to the entire web.";
         document.getElementById("manage").innerHTML = "";
-        document.getElementById("manage").style.display = "inline";
+        document.getElementById("manage").style.display = "none";
         if (li1 == 0){
             document.getElementById("li1").src = "images/enabled.png";
             document.getElementById("details").style.background = "#94E879";
