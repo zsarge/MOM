@@ -23,8 +23,9 @@ window.onload = function(){
     }
     
     function closeWindow() { 
-        window.open('','_parent',''); 
-        window.close(); 
+        chrome.tabs.getCurrent(function(tab) {
+            chrome.tabs.remove(tab.id, function() { });
+        });
     } 
 
     // Used to toggle the menu on smaller screens when clicking on the menu button
