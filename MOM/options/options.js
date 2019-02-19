@@ -9,6 +9,21 @@ window.onload = function(){
     document.getElementById("backicon").addEventListener('click', function(){
         window.history.go(-1);
     });
+    chrome.storage.sync.get(['wl'], function(result){
+        var wl = result.wl;
+        if (wl){
+            document.getElementById("li1").src = "images/disabled.png";
+            li1 = 0;
+            document.getElementById("li2").src = "images/enabled.png";
+            li2 = 1;
+        }
+        else {
+            document.getElementById("li1").src = "images/enabled.png";
+            li1 = 1;
+            document.getElementById("li2").src = "images/disabled.png";
+            li2 = 0;
+        }
+    });
     document.getElementById("li1").addEventListener('click', fli1);
     document.getElementById("lo1").addEventListener('click', function(){
         document.getElementById("dh1").innerHTML = "Allow all web content";
@@ -103,12 +118,23 @@ window.onload = function(){
         document.getElementById("dp").innerHTML = "Enable this if you want to have access to the entire web.";
         document.getElementById("manage").innerHTML = "";
         document.getElementById("manage").style.display = "none";
+        if (li2 == 0){
+            document.getElementById("li2").src = "images/enabled.png";
+            li2++;
+            chrome.storage.sync.set({wl: true});
+        }
+        else if (li2 == 1){
+            document.getElementById("li2").src = "images/disabled.png";
+            li2--;
+            chrome.storage.sync.set({wl: false});
+        };
         if (li1 == 0){
             document.getElementById("li1").src = "images/enabled.png";
             document.getElementById("details").style.background = "#94E879";
             document.getElementById("hero").src = "images/awc/enabled.svg";
             document.getElementById("manage").style.background = "#62CC48";
             li1++;
+            chrome.storage.sync.set({wl: false});
             
         }
         else if (li1 == 1){
@@ -116,7 +142,9 @@ window.onload = function(){
             document.getElementById("details").style.background = "#EA7878";
             document.getElementById("hero").src = "images/awc/disabled.svg";
             document.getElementById("manage").style.background = "#CC4646";
+            document.getElementById("li2").src = "images/enabled.png";
             li1--;
+            chrome.storage.sync.set({wl: true});
         };
     };
 
@@ -125,12 +153,23 @@ window.onload = function(){
         document.getElementById("dp").innerHTML = "Enable this if you want to have only a list of specific accessible websites.";
         document.getElementById("manage").innerHTML = "Manage whitelist";
         document.getElementById("manage").style.display = "inline";
+        if (li1 == 0){
+            document.getElementById("li1").src = "images/enabled.png";
+            li1++;
+            chrome.storage.sync.set({wl: false});
+        }
+        else if (li1 == 1){
+            document.getElementById("li1").src = "images/disabled.png";
+            li1--;
+            chrome.storage.sync.set({wl: true});
+        };
         if (li2 == 0){
             document.getElementById("li2").src = "images/enabled.png";
             document.getElementById("details").style.background = "#94E879";
             document.getElementById("hero").src = "images/ew/enabled.svg";
             document.getElementById("manage").style.background = "#62CC48";
             li2++;
+            chrome.storage.sync.set({wl: true});
         }
         else if (li2 == 1){
             document.getElementById("li2").src = "images/disabled.png";
@@ -138,6 +177,7 @@ window.onload = function(){
             document.getElementById("hero").src = "images/ew/disabled.svg";
             document.getElementById("manage").style.background = "#CC4646";
             li2--;
+            chrome.storage.sync.set({wl: false});
         };
     };
 

@@ -9,7 +9,8 @@
   "homepage_url": "https://www.elderhs.org/page",
 
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
     //All non-whitelisted websites are now blocked. Go to bkg.js and add websites to the allowed array to add them to the whitelist.
   "background": {
