@@ -9,6 +9,17 @@ window.onload = function(){
     document.getElementById("backicon").addEventListener('click', function(){
         window.history.go(-1);
     });
+    chrome.storage.sync.get(['dl'], function(result){
+        var dl = result.dl;
+        if (dl){
+            document.getElementById("li3").src = "images/disabled.png";
+            li3 = 0;
+        }
+        else {
+            document.getElementById("li3").src = "images/enabled.png";
+            li3 = 1;
+        }
+    });
     chrome.storage.sync.get(['wl'], function(result){
         var wl = result.wl;
         if (wl){
@@ -191,6 +202,7 @@ window.onload = function(){
             document.getElementById("details").style.background = "#94E879";
             document.getElementById("hero").src = "images/ad/enabled.svg";
             document.getElementById("manage").style.background = "#62CC48";
+            chrome.storage.sync.set({dl: false});
             li3++;
         }
         else if (li3 == 1){
@@ -198,6 +210,7 @@ window.onload = function(){
             document.getElementById("details").style.background = "#EA7878";
             document.getElementById("hero").src = "images/ad/disabled.svg";
             document.getElementById("manage").style.background = "#CC4646";
+            chrome.storage.sync.set({dl: true});
             li3--;
         };
     };

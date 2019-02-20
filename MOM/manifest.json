@@ -10,7 +10,8 @@
 
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "downloads"
   ],
     //All non-whitelisted websites are now blocked. Go to bkg.js and add websites to the allowed array to add them to the whitelist.
   "background": {
