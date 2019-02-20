@@ -1,2 +1,79 @@
 <!DOCTYPE html>
 <script src="iconclick.js"></script>
+<img src="images/auth.svg" id="authimg">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+<h1 id="title">Please enter your PIN:</h1>
+<p id="caption">If you have not set up a PIN yet just enter your desired PIN into the box.</p>
+<style>
+    #authimg{
+        width: 256px;
+        display: block;
+        margin: auto;
+        padding: 20px;
+    }
+    #pin{
+        font-family: 'Montserrat', sans-serif;
+        background-color: #EFEFEF;
+        border: none;
+        padding: 3px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-radius: 30px;
+        width: 95%;
+        height: 30px;
+        display: block;
+        margin-bottom: 7px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        color: #3F3D56;
+        padding-bottom: 2px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        display: block;
+        margin: auto;
+    }
+    p{
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 9px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+    #login{
+        background-color: #4848CC;
+        border: none;
+        display: block;
+        color: #FFFFFF;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        margin: auto;
+        cursor: pointer;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    input:focus, select:focus, textarea:focus, button:focus {
+        outline: none;
+    }
+    #yes, #no{
+        width: 50px;
+        cursor: pointer;
+    }
+    #newpin{
+        width: 105px;
+        margin: auto;
+        display: none;
+    }
+</style>
+<form id="enterpin" autocomlete="off">
+    <input autocomplete="off" id="pin" type="text" placeholder=" PIN">
+    <input id="login" type="submit" value="Login">
+</form>
+<div id="newpin">
+    <img id="yes" src="options/images/enabled.png">
+    <img id="no" src="options/images/disabled.png">
+</div>
+
